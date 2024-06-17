@@ -1,5 +1,11 @@
 ### RealMAN: A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization
 
+- can be accessed on https://mab.to/uFs0WNo0hgrV6/us3 now.
+
+- will also be avaliable on https://www.aishelltech.com/RealMAN in a few days.
+
+
+
 ![The RealMAN recording devices](images/devices.png)
 
 
