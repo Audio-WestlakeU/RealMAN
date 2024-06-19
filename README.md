@@ -5,7 +5,7 @@
 The **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
 - A 32-channel array with high-fidelity microphones is used for recording
 - A loudspeaker is used for playing source speech signals
-- A total of 83-hour speech signals (48 hours for static speaker and 35 hours of moving speaker) are recorded in 32 different scenes, and 144 hours of background noise are recorded in 31 different scenes
+- A total of 83-hour speech signals (48 hours for static speaker and 35 hours for moving speaker) are recorded in 32 different scenes, and 144 hours of background noise are recorded in 31 different scenes
 - Both speech and noise recording scenes cover various common indoor, outdoor, semi-outdoor and transportation environments
 - The azimuth angle of the loudspeaker is annotated with an omni-direction fisheye camera, and is used for the training of source localization networks
 - The direct-path signal is obtained by filtering the played speech signal with an estimated direct-path propagation filter, and is used for the training of speech enhancement networks.
@@ -74,7 +74,7 @@ RealMAN
 │   ├── scene_images
 │   ├── scene_info.json
 │   └── speaker_info.csv
-└── train/val/test/val_raw/test_raw
+└── train|val|test|val_raw|test_raw
     ├── train_moving_source_location.csv
     ├── train_static_source_location.csv
     ├── dp_speech
@@ -86,7 +86,7 @@ RealMAN
     │   │   │   └── ...
     │   │   └── static
     │   └── ...
-    ├── ma_speech/ma_noisy_speech
+    ├── ma_speech|ma_noisy_speech
     │   ├── BadmintonCourt2
     │   │   ├── moving
     │   │   │   ├── 0010
@@ -102,13 +102,13 @@ The naming convention is as follows:
 
 ```
 # Recorded Signal
-TRAIN/VAL/TEST_M/S_scene_speakerId_utteranceId_channelId.flac
+[TRAIN|VAL|TEST]/[M|S]/scene_speakerId_utteranceId_channelId.flac
 
 # Direct-Path Signal
-TRAIN/VAL/TEST_M/S_scene_speakerId_utteranceId.flac
+[TRAIN|VAL|TEST]/[M|S]/scene_speakerId_utteranceId.flac
 
 # Source Location
-train/val/test_moving/static_source_location.csv
+[train|val|test]/[moving|static]_source_location.csv
 ```
 
 ### License
