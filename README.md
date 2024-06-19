@@ -31,13 +31,13 @@ The dataset comprises the following components:
 
 | File | Size | Description |
 | -------- | -- | -- |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f46e788b5.94756052" target="_blank">train.rar</a> | 521.76 GB | The training set consisting of 48 hours of static speaker speech and 35 hours of moving speaker speech |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f7eac7a64.56207586" target="_blank">val.rar</a> | 25.57 GB | The validation set consisting of 12 hours of static speaker speech and 9 hours of moving speaker speech |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f9cd14af4.31130467" target="_blank">val_raw.rar</a> | 65.57 GB | The validation set consisting of 12 hours of static speaker speech and 9 hours of moving speaker speech without any noise added |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f36b225e9.45148635" target="_blank">test.rar</a> | 38.02 GB | The test set consisting of 12 hours of static speaker speech and 9 hours of moving speaker speech |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f23ff9304.13647498" target="_blank">test_raw.rar</a> | 91.75 GB | The test set consisting of 12 hours of static speaker speech and 9 hours of moving speaker speech without any noise added |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727bceaa1409.33560489" target="_blank">dataset_info.rar</a> | 127.9 MB | The dataset information file including scene images, scene information, and speaker information |
-| <a href="https://www.myairbridge.com/dl-service-3eaa53cc/dl.66727f69e9c803.79477985" target="_blank">transcriptions.trn</a> | 2.4 MB | The transcription file for the dataset |
+| `train.rar` | 521.76 GB | The training set consisting of 36.6 hours of static speaker speech and 26.6 hours of moving speaker speech  (`ma_speech`), 106.3 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`train_*_source_location.csv`). |
+| `val_raw.rar` | 65.57 GB | The raw validation set consisting of 4.5 hours of static speaker speech and 3.3 hours of moving speaker speech (`ma_speech`),  16.0 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`val_*_source_location.csv`). |
+| `val.rar` | 25.57 GB | The validation set consisting of mixed noisy speech recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`), sound source location (`val_*_source_location.csv`). |
+| `test_raw.rar` | 91.75 GB | The raw test set consisting of 6.9 hours of static speaker speech and 4.8 hours of moving speaker speech (`ma_speech`),  22.2 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`test_*_source_location.csv`). |
+| `test.rar` | 38.02 GB | The test set consisting of mixed noisy speech recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`), sound source location (`test_*_source_location.csv`). |
+| `dataset_info.rar` | 127.9 MB | The dataset information file including scene photos, scene information (T60, recording duration, etc), and speaker information |
+| `transcriptions.trn` | 2.4 MB | The transcription file of speech for the dataset |
 
 
 
@@ -102,13 +102,13 @@ The naming convention is as follows:
 
 ```
 # Recorded Signal
-[TRAIN|VAL|TEST]/[M|S]/scene_speakerId_utteranceId_channelId.flac
+[TRAIN|VAL|TEST]_[M|S]_scene_speakerId_utteranceId_channelId.flac
 
 # Direct-Path Signal
-[TRAIN|VAL|TEST]/[M|S]/scene_speakerId_utteranceId.flac
+[TRAIN|VAL|TEST]_[M|S]_scene_speakerId_utteranceId.flac
 
 # Source Location
-[train|val|test]/[moving|static]_source_location.csv
+[train|val|test]_[moving|static]_source_location.csv
 ```
 
 ### License
