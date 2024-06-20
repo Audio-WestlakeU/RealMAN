@@ -1,6 +1,6 @@
 ## RealMAN: A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization
 <div align=center>
-<img src=images/real_man_logo_v1.png width="700"/>
+<img src=images/realman_logo_v1.png width="700"/>
 </div>
 
 ### Description
