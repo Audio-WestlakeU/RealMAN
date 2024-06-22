@@ -1,0 +1,12 @@
+# 任务配置文件的名字可以当作优先级，例如：099_xxx.yaml 会比 100_xxx.yaml 先执行，100_xxx.yaml 会比 101_xxx.yaml 先执行。
+# template开头的yaml文件会被忽略，即不会被启动。
+
+# 修改本文件的名字为其他名字，运行run_tasks.py即会启动
+# 本文件配置了一个简单的示例，这个示例会在空闲3个GPU的时候被启动。
+# 被启动之后，会执行内容替换之后的echo指令。在started目录下对应名字的log里面可以找到执行的结果。
+exp_name: 测试5
+require:
+  num_gpus: 3
+  time_needed_to_start_completely: 60 # 执行任务的命令启动之后，需要多少秒才能占领GPU，防止GPU被错误判定为空闲状态，默认60秒。
+  time_needed_to_end_completely: 600 # log文件多久不被修改就认为训练过程结束。默认600秒，即10分钟。
+cmd: echo {exp_name} {gpus} {task_file_name} # {exp_name}， {gpus}， {task_file_name}会被替换成对应的值，如："测试5"、"0,1,2,"、"100.yaml"。如果不需要这些参数作为命令，则可以去掉
