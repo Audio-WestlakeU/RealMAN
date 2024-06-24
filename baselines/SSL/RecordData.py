@@ -149,9 +149,9 @@ class RealData(Dataset):
 				target = self.all_targets.at[sig_path.split('RealMAN/')[-1], 'angle(°)']
 				if isinstance(target, float):
 					targets = torch.ones((self.target_len,1)) * int(target)
-					vad_source = torch.zeros((self.target_len,1))  # 创建长度为40的数组，初始值为0
-					end_index = min(int(len_signal * 10), self.target_len)  # 确保不会超过数组长度40
-					vad_source[:end_index] = 1  # 设置前end_index个元素为1	
+					vad_source = torch.zeros((self.target_len,1)) 
+					end_index = min(int(len_signal * 10), self.target_len) 
+					vad_source[:end_index] = 1 	
 				elif isinstance(target, str):
 					temp_targets = np.array([int(float(i)) for i in target.split(',')])
 					targets = torch.zeros((self.target_len,1))
@@ -166,7 +166,7 @@ class RealData(Dataset):
 				target = self.all_targets.at[sig_path.split('RealMAN/')[-1], 'angle(°)']
 				if isinstance(target, float):
 					targets = torch.ones((self.target_len,1)) * int(target)
-					vad_source = torch.ones((self.target_len,1))  # 创建长度为40的数组，初始值为0
+					vad_source = torch.ones((self.target_len,1))  
 				elif isinstance(target, str):
 					targets = np.array([int(float(i)) for i in target.split(',')])
 					targets_idx_begin = int(signal_start / (self.target_fs / 10))
