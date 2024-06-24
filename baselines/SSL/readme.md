@@ -11,16 +11,16 @@ In the RealMAN paper, we use the CRNN and a tiny version of IPDnet [1] as our ba
 ### Usage
 We have re implemented FN-SSL using the Pytorch-lightning framework, which has a improvement in training speed compared to the torch.
 
-* For Train,
+* For train,
 
 ```
 python run_CRNN.py/run_IPDnet.py fit --data.batch_size=[*,*] --trainer.devices=*,*
 ```
 
-* For test,
+* For inference,
 
 ```
-python run_CRNN.py/run_IPDnet.py  --ckpt_path logs/MyModel/version_x/checkpoints/**.ckpt --trainer.devices=*,*
+python run_CRNN.py/run_IPDnet.py test --ckpt_path logs/MyModel/version_x/checkpoints/**.ckpt --trainer.devices=*,*
 ```
 
 Meanwhile, we have provided code for training the variable-array version of IPDnet by setting the  `is_variable_array` of dataset module to True.
