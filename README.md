@@ -116,6 +116,12 @@ The naming convention is as follows:
 [train|val|test]_[moving|static]_source_location.csv
 ```
 
+
+# Baseline
+- <a href="https://github.com/Audio-WestlakeU/RealMAN/tree/main/baselines/SE" target="_blank">Speech enhancement</a>
+- <a href="https://github.com/Audio-WestlakeU/RealMAN/tree/main/baselines/SSL" target="_blank">Speech source localization</a>
+
+
 ### License
 
 The dataset is licensed under the Creative Commons Attribution 4.0 International (**CC-BY-4.0**) license. 
