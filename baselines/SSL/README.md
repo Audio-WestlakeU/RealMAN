@@ -9,7 +9,7 @@ In the RealMAN paper, we use the CRNN and a tiny version of IPDnet [1] as our ba
 | `run_CRNN.py, run_IPDnet.py` | The pytorch-lightning Trainer implementation.|
 
 ### Usage
-We have re implemented FN-SSL using the Pytorch-lightning framework, which has a improvement in training speed compared to the torch.
+We have implemented the baseline methods using the Pytorch-lightning framework.
 
 * For train,
 
