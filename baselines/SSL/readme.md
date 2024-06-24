@@ -28,4 +28,5 @@ Meanwhile, we have provided code for training the variable-array version of IPDn
 
 
 [1] Yabo Wang, Bing Yang, Xiaofei Li. [IPDnet: A Universal Direct-Path IPD Estimation Network for Sound Source Localization](https://arxiv.org/abs/2405.07021).
+
 [2] Bing Yang, Hong Liu, Xiaofei Li. SRP-DNN: Learning direct-path phase difference for multiple moving sound source localization. ICASSP, 2022.
