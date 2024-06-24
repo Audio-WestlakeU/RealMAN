@@ -1,0 +1,49 @@
+seed_everything: 2
+trainer:
+  gradient_clip_val: 5
+  gradient_clip_algorithm: norm
+  devices: null
+  accelerator: gpu
+  strategy: auto
+  sync_batchnorm: false
+  precision: 32
+model:
+  arch:
+    class_path: models.arch.SpatialNet.SpatialNet
+    init_args:
+      dim_input: 18
+      dim_output: 2
+      num_layers: 8
+      encoder_kernel_size: 5
+      dim_hidden: 48
+      dim_ffn: 96
+      num_heads: 2
+      dropout: [0, 0, 0]
+      kernel_size: [5, 3]
+      conv_groups: [8, 8]
+      norms: ["LN", "LN", "GN", "LN", "LN", "LN"]
+      dim_squeeze: 8
+      num_freqs: 257
+      full_share: 0
+  channels: [0, 1, 2, 3, 4, 5, 6, 7, 8] 
+  ref_channel: 0
+  stft:
+    class_path: models.io.stft.STFT
+    init_args:  # by default set to {} to avoid using wrong stft config
+      n_fft: 512
+      n_hop: 256
+  loss:
+    class_path: models.io.loss.Loss
+    init_args:
+      loss_func: models.io.loss.neg_si_sdr
+      pit: true
+  norm:
+    class_path: models.io.norm.Norm
+    init_args:
+      mode: utterance
+      online: false
+  optimizer: [Adam, { lr: 0.001 }]
+  lr_scheduler: [ExponentialLR, { gamma: 0.99 }]
+  exp_name: exp
+  metrics: [SNR, SDR, SI_SDR, NB_PESQ, WB_PESQ, eSTOI]
+  val_metric: dnsmos

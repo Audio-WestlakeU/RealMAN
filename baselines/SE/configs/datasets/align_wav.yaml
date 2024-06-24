@@ -1,0 +1,23 @@
+data:
+  class_path: data_loaders.align_wav.AlignWavDataModule
+  init_args:
+    aishell_dir: ~/datasets/AISHELL # the directory of played source signals
+    rir_dir: ~/datasets/realistic_audio_rirs_9chn_8k # the directory of simulated RIRs, use `generate_rirs.py` and `configs/datasets/realistic_audio_rirs_9chn.npz` to generate RIRs
+    noise_dir: /nvmework4/raw/noise # the directory of recorded noise signals
+    num_chn: 9
+    chn_shuffle: false
+    sample_rate: 8000
+    target: direct_path
+    # static:
+    datasets: ["train", "val", "test", "test"]
+    # moving speaker
+    # datasets: ["train_moving(0.12,0.4)", "val_moving(0.12,0.4)", "test_moving(0.12,0.4)", "test_moving(0.12,0.4)"]
+    # half-static + half-moving:
+    # datasets: ["train_moving(0.12,0.4,0.5)", "val_moving(0.12,0.4,0.5)", "test_moving(0.12,0.4,0.5)", "test_moving(0.12,0.4,0.5)"]
+    audio_time_len: [4.0, 4.0, 4.0, 4.0] # trained with 4s audio first, then fine-tuned with 8s audio
+    snr: [5.0, 10.0]
+    max_shift: 0.1
+    return_noise: false
+    return_rvbt: false
+    return_clean: true
+    batch_size: [4,8]

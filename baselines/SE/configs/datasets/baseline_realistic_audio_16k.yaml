@@ -1,0 +1,24 @@
+data:
+  class_path: data_loaders.baseline_realistic_audio.RealisticAudioDataModule
+  init_args:
+    dataset_dir: /data/home/RealisticAudio/dataset_16khz
+    record_dir:
+    - null
+    - /data/home/RealisticAudio/dataset_VT_after_VAD/val/rec/high
+    - /data/home/RealisticAudio/dataset_VT_after_VAD/test/rec/high
+    - null
+    target_dir:
+    - null
+    - /data/home/RealisticAudio/dataset_VT_after_VAD/val/tar/high
+    - /data/home/RealisticAudio/dataset_VT_after_VAD/test/tar/high
+    - null
+    datasets: ["train", "val","test","test"]
+    channels: [24, 2, 6, 10, 14]
+    percision_mode: 'high'
+    spk_pattern: 'all'
+    use_matching_RT60_for_train: false
+    noise_type: 'real'
+    noise_proportion_to_test: 0.0
+    audio_time_len: [4.0, 4.0, null,null]
+    snr: [0, 15]
+    batch_size: [4, 8]
