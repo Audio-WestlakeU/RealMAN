@@ -1,18 +1,13 @@
-### FaSNet-TAC
-please see [yluo42/TAC](https://github.com/yluo42/TAC).
-
-
-
-### SpatialNet-tiny
-
-In RealMAN paper, we use a tiny version of [SpatialNet](https://arxiv.org/abs/2307.16516) as our baseline model, where the hidden size of the SpatialNet-small version reported in the paper is further reduced from 96 to 48. See `https://github.com/Audio-WestlakeU/NBSS` for example usage.
+### Baselines
+One popular time-domain network, i.e. [FaSNet-TAC](https://arxiv.org/abs/1910.14104), and one recently proposed frequency-domain network, i.e. [SpatialNet](https://arxiv.org/abs/2307.16516), are used for benchmarking the speech enhancement performance of the proposed dataset.
 
 
 | Code | Description |
 | --- | --- |
 | `models/arch/SpatialNet.py` | The network implementation of SpatialNet. Configs: `configs/SpatialNetTiny.yaml` |
 | `data_loaders/baseline_realistic_audio.py` | The reference dataloader implementation. Configs: `configs/datasets/baseline_realistic_audio_16k.yaml` |
-| `SharedTrainer.py` | The pytorch-lightning Trainer implementation.|
+| `SharedTrainer.py` | The pytorch-lightning Trainer implementation for SpatialNet.|
+| `FaSNet_TAC.py` | The pytorch-lightning Trainer implementation for FaSNet-TAC. Configs: `configs/FaSNet_TAC.yaml` |
 
 
 
@@ -25,3 +20,7 @@ The ASR performances are evaluated by an established ASR model trained by over 1
 | `asr_evaluate/2_filter_trn_by_scene.py` | Filter the reference transcript file in the RealMAN dataset to each test scene.|
 | `asr_evaluate/3_calculate_cer.py` | Calculate CER using sclite given the path of enhanced trn and reference trn.|
 | `asr_evaluate/4_summariza_results` | Summarize CER results in 'summary.md'.|
+
+
+### Special Thanks
+- [yluo42/TAC](https://github.com/yluo42/TAC) for the open-source implementation of FaSNet-TAC.

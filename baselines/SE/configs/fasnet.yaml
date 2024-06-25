@@ -1,0 +1,53 @@
+seed_everything: null
+trainer:
+  gradient_clip_val: 5
+  gradient_clip_algorithm: norm
+  accumulate_grad_batches: 2
+  max_epochs: 200
+  strategy: ddp_find_unused_parameters_false
+  precision: 32
+model:
+  model: FaSNet_TAC
+  enc_dim: 64
+  feature_dim: 64
+  hidden_dim: 128
+  layer: 4
+  segment_size: 50
+  nspk: 1
+  win_len: 4
+  context_len: 16
+  sr: 16000
+  learning_rate: 0.001
+  dataset: wsj0
+  channels: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+model_checkpoint:
+  dirpath: null
+  filename: epoch{epoch}_metrics{val/dnsmos_ovr:.4f}
+  monitor: val/dnsmos_ovr
+  verbose: false
+  save_last: true
+  save_top_k: -1
+  save_weights_only: false
+  mode: max
+  auto_insert_metric_name: false
+  every_n_train_steps: null
+  train_time_interval: null
+  every_n_epochs: 1
+  save_on_train_epoch_end: null
+early_stopping:
+  monitor: val/dnsmos_ovr
+  min_delta: 0.01
+  patience: 30
+  verbose: false
+  mode: max
+  strict: true
+  check_finite: true
+  stopping_threshold: null
+  divergence_threshold: null
+  check_on_train_epoch_end: null
+learning_rate_monitor:
+  logging_interval: epoch
+  log_momentum: false
+model_summary:
+  max_depth: -1
+ckpt_path: null
