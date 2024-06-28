@@ -5,7 +5,7 @@ One popular time-domain network, i.e. [FaSNet-TAC](https://arxiv.org/abs/1910.14
 | Code | Description |
 | --- | --- |
 | `models/arch/SpatialNet.py` | The network implementation of SpatialNet. Configs: `configs/SpatialNetTiny.yaml` |
-| `data_loaders/baseline_realistic_audio.py` | The reference dataloader implementation. Configs: `configs/datasets/baseline_realistic_audio_16k.yaml` |
+| `data_loaders/realman_enh_dataset.py` | The reference dataloader implementation. Configs for baseline: `configs/datasets/realman_enh_baseline_16k.yaml` and configs for microphone-array generalization: `configs/datasets/realman_enh_generalization_16k.yaml` |
 | `SharedTrainer.py` | The pytorch-lightning Trainer implementation for SpatialNet.|
 | `FaSNet_TAC.py` | The pytorch-lightning Trainer implementation for FaSNet-TAC. Configs: `configs/FaSNet_TAC.yaml` |
 
