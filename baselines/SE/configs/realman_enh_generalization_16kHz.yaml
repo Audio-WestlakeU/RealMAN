@@ -1,0 +1,28 @@
+data:
+  class_path: data_loaders.realman_enh_dataset.RealisticAudioDataModule
+  init_args:
+    dataset_dir: /data/home/RealisticAudio/RealMAN
+    record_dir:
+    - /data/home/RealisticAudio/RealMAN/train/ma_speech
+    - /data/home/RealisticAudio/RealMAN/val/ma_noisy_speech
+    - /data/home/RealisticAudio/RealMAN/test/ma_noisy_speech
+    - null
+    target_dir:
+    - /data/home/RealisticAudio/RealMAN/train/dp_speech
+    - /data/home/RealisticAudio/RealMAN/val/dp_speech
+    - /data/home/RealisticAudio/RealMAN/test/dp_speech
+    - null
+    noise_dir:
+    - /data/home/RealisticAudio/RealMAN/train/ma_noise
+    - null
+    - null
+    - null
+    datasets: ["train", "val", "test", "test"]
+    channels: [0, 1, 5, 9, 13]
+    spk_pattern: 'all'
+    noise_type: 'real'
+    noise_proportion_to_test: 0.0
+    audio_time_len: [4.0, 4.0, null,null]
+    snr: [0, 15]
+    batch_size: [4, 8]
+    use_microphone_array_generalization: true
