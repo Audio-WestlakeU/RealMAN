@@ -9,6 +9,45 @@ One popular time-domain network, i.e. [FaSNet-TAC](https://arxiv.org/abs/1910.14
 | `SharedTrainer.py` | The pytorch-lightning Trainer implementation for SpatialNet.|
 | `FaSNet_TAC.py` | The pytorch-lightning Trainer implementation for FaSNet-TAC. Configs: `configs/FaSNet_TAC.yaml` |
 
+#### Usage
+* Baseline
+  
+  For train,
+  
+  ```
+  # enter the corresponding files
+  cd baselines/SE/
+  
+  # commands for FaSNet-TAC
+  python -m models.FaSNet_TAC fit --config=configs/fasnet.yaml  --config configs/datasets/realman_enh_baseline_16kHz.yaml  --trainer.devices=0,1, --data.batch_size=[4,1]
+  
+  # commands for Spatialnet
+  python -m models.SharedTrainer fit --config configs/SpatialNetTiny.yaml  --config configs/datasets/realman_enh_baseline_16kHz.yaml  --trainer.devices=0,1  --data.init_args.batch_size=[4,8] --model.compile=true --trainer.precision=16-mixed
+  ```
+
+  For test
+  ```
+  # commands for FaSNet-TAC
+  python -m models.FaSNet_TAC test --config=dir_to_exp/config.yaml --trainer.devices=X,X, --ckpt_path=dir_to_exp/xxx.ckpt
+  
+  # commands for Spatialnet
+  python -m models.SharedTrainer test --config=dir_to_exp/config.yaml --trainer.devices=X,X, --ckpt_path=dir_to_exp/xxx.ckpt
+  ```
+
+* Microphone-array generalization
+  
+  To explore the microphone-array generalization, we also provide the code for organizing the varaible-array data for train. (More details could be found in the function *select_microphone_array_for_enh* in data_loaders/realman_enh_dataset.py)
+  
+  Take the FaSNet-TAC as example, for train
+  
+  ```
+  python -m models.FaSNet_TAC fit --config=configs/fasnet.yaml  --config configs/datasets/realman_enh_generalization_16kHz.yaml  --trainer.devices=0,1, --data.batch_size=[1,1] --trainer.accumulate_grad_batches=8
+  ```
+
+  For test
+  ```
+  python -m models.FaSNet_TAC test --config=dir_to_exp/config.yaml --trainer.devices=X,X, --ckpt_path=dir_to_exp/xxx.ckpt
+  ```
 
 
 ### ASR Evaluation
