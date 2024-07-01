@@ -19,7 +19,7 @@ The RealMAN dataset is valuable in two aspects:
 - Benchmark speech enhancement and localization algorithms in real scenarios
 - Offer a substantial amount of real-world training data for potentially improving the performance of real-world applications
 
-The details of the RealMAN dataset are described in the following paper: [<a href="" target="_blank">arXiv</a>]
+The details of the RealMAN dataset are described in the following paper: [<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>]
 
 
 <div align=center>
