@@ -83,4 +83,4 @@ if __name__ == '__main__':
     files = all_files
     files.sort()
 
-    asr_procss(files)
+    asr_process(files)
