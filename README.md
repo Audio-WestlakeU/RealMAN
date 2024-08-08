@@ -5,17 +5,24 @@
 </div>
 
 ---
+### Introduction
+***Motivation:***
+The training of deep learning-based multichannel speech enhancement and source localization systems relies heavily on the simulation of room impulse response and multichannel diffuse noise, due to the lack of large-scale real-recorded datasets. However, the acoustic mismatch between simulated and real-world data could degrade the model performance when applying in real-world scenarios. To bridge this simulation-to-real gap, we presents a new relatively large-scale real-recorded and annotated dataset. 
 
-### Description
-The **Audio Signal and Information Processing Lab** at Westlake University, in collaboration with **AISHELL**, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
+***Description:*** 
+The <a href="https://audio.westlake.edu.cn/" target="_blank">**Audio Signal and Information Processing Lab**</a> at Westlake University, in collaboration with <a href="https://www.aishelltech.com/" target="_blank">**AISHELL**</a>, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
 - A 32-channel array with high-fidelity microphones is used for recording
 - A loudspeaker is used for playing source speech signals
 - A total of 83-hour speech signals (48 hours for static speaker and 35 hours for moving speaker) are recorded in 32 different scenes, and 144 hours of background noise are recorded in 31 different scenes
 - Both speech and noise recording scenes cover various common indoor, outdoor, semi-outdoor and transportation environments
 - The azimuth angle of the loudspeaker is annotated with an omni-direction fisheye camera, and is used for the training of source localization networks
-- The direct-path signal is obtained by filtering the played speech signal with an estimated direct-path propagation filter, and is used for the training of speech enhancement networks.
+- The direct-path signal is obtained by filtering the played speech signal with an estimated direct-path propagation filter, and is used for the training of speech enhancement networks
 
-The RealMAN dataset is valuable in two aspects:
+***Baseline demonstration:***
+- compared to using simulated data, the proposed dataset is indeed able to train better speech enhancement and source localization networks
+- using various sub-arrays of the proposed 32-channel microphone array can successfully train variable-array networks that can be directly used to unseen arrays 
+
+***Importance:***
 - Benchmark speech enhancement and localization algorithms in real scenarios
 - Offer a substantial amount of real-world training data for potentially improving the performance of real-world applications
 
