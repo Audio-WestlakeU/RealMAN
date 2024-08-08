@@ -7,7 +7,7 @@
 ---
 
 ### Description
-**The Audio Signal and Information Processing Lab** at Westlake University, in collaboration with **AISHELL**, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
+The **Audio Signal and Information Processing Lab** at Westlake University, in collaboration with **AISHELL**, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
 - A 32-channel array with high-fidelity microphones is used for recording
 - A loudspeaker is used for playing source speech signals
 - A total of 83-hour speech signals (48 hours for static speaker and 35 hours for moving speaker) are recorded in 32 different scenes, and 144 hours of background noise are recorded in 31 different scenes
