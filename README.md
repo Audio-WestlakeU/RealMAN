@@ -3,11 +3,13 @@
  
 **A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
 
-<a href="https://audio.westlake.edu.cn/" target="_blank">Audio Signal and Information Processing Lab</a> at Westlake University, <a href="https://www.aishelltech.com/" target="_blank">Beijing AIShell Technology Co. Ltd</a>
+<span style="font-size:11px;">
+<a href="https://arxiv.org/abs/2406.19959" target="_blank">**arXiv paper**</a> by
+<a href="https://audio.westlake.edu.cn/" target="_blank">AudioLab at Westlake University</a> &
+<a href="https://www.aishelltech.com/" target="_blank"> AIShell Technology Co. Ltd</a> 
 
-<!--
- The details of the RealMAN dataset are described in the following paper: -->
-[<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>]
+</span>
+<!-- The details of the RealMAN dataset are described in the following paper: -->
 </div>
 
 ---
