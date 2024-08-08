@@ -1,7 +1,13 @@
 <div align=center>
 <img src=images/realman_logo_v1.png width="400"/>
  
-**A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization**
+**A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
+
+<a href="https://audio.westlake.edu.cn/" target="_blank">Audio Signal and Information Processing Lab</a> at Westlake University, <a href="https://www.aishelltech.com/" target="_blank">Beijing AIShell Technology Co. Ltd</a>
+
+<!--
+ The details of the RealMAN dataset are described in the following paper: -->
+[<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>]
 </div>
 
 ---
@@ -10,7 +16,7 @@
 The training of deep learning-based multichannel speech enhancement and source localization systems relies heavily on the simulation of room impulse response and multichannel diffuse noise, due to the lack of large-scale real-recorded datasets. However, the acoustic mismatch between simulated and real-world data could degrade the model performance when applying in real-world scenarios. To bridge this simulation-to-real gap, we presents a new relatively large-scale real-recorded and annotated dataset. 
 
 ***Description:*** 
-The <a href="https://audio.westlake.edu.cn/" target="_blank">**Audio Signal and Information Processing Lab**</a> at Westlake University, in collaboration with <a href="https://www.aishelltech.com/" target="_blank">**AISHELL**</a>, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
+The Audio Signal and Information Processing Lab at Westlake University, in collaboration with AISHELL, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
 - A 32-channel array with high-fidelity microphones is used for recording
 - A loudspeaker is used for playing source speech signals
 - A total of 83-hour speech signals (48 hours for static speaker and 35 hours for moving speaker) are recorded in 32 different scenes, and 144 hours of background noise are recorded in 31 different scenes
@@ -26,7 +32,6 @@ The <a href="https://audio.westlake.edu.cn/" target="_blank">**Audio Signal and 
 - Benchmark speech enhancement and localization algorithms in real scenarios
 - Offer a substantial amount of real-world training data for potentially improving the performance of real-world applications
 
-The details of the RealMAN dataset are described in the following paper: [<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>]
 
 
 <div align=center>
