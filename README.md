@@ -3,7 +3,7 @@
  
 **A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
 
-<span style="font-size:11px;">
+<span style="font-size:10px;">
 <a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv paper</a> by
 <a href="https://audio.westlake.edu.cn/" target="_blank">AudioLab at Westlake University</a> &
 <a href="https://www.aishelltech.com/" target="_blank"> AIShell Technology Co. Ltd</a>
