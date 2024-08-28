@@ -47,6 +47,8 @@ def select_microphone_array_for_enh(pos_mics, rng):
                 not_use_five_linear_mics = False
         else:
             not_use_five_linear_mics = False
+    CH_list = [0] + CH_list
+    assert len(CH_list) == mic_gemo.shape[0]
     return CH_list, mic_gemo
 
 
