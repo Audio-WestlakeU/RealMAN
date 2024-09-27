@@ -20,9 +20,9 @@ class CRNN(nn.Module):
 				at_module.CausCnnBlock(cnn_dim, cnn_dim, kernel=(3,3), stride=(1,1), padding=(1,1), use_res=res_flag),
 				nn.MaxPool2d(kernel_size=(2, 1)),
 				at_module.CausCnnBlock(cnn_dim, cnn_dim, kernel=(3,3), stride=(1,1), padding=(1,1), use_res=res_flag),
-				nn.MaxPool2d(kernel_size=(2, 2)),
+				nn.MaxPool2d(kernel_size=(2, 1)),
 				at_module.CausCnnBlock(cnn_dim, cnn_dim, kernel=(3,3), stride=(1,1), padding=(1,1), use_res=res_flag),
-				nn.MaxPool2d(kernel_size=(2, 3)),
+				nn.MaxPool2d(kernel_size=(2, 5)),
             )
 
 		ratio = 2
