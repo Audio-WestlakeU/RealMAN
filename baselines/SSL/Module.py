@@ -51,14 +51,14 @@ class STFT(nn.Module):
 
 		nb = signal.shape[0]
 		# nt = int((nsample) / win_shift) + 1  # for iSTFT
-		nt = np.floor((nsample - self.win_len) / win_shift + 1).astype(int)
+		nt = np.floor((nsample) / win_shift + 1).astype(int)
 		stft = torch.zeros((nb, nf, nt, nch), dtype=torch.complex64)
 
 		if self.win == 'hann':
 			window = torch.hann_window(window_length=self.win_len, device=signal.device)
 		for ch_idx in range(0, nch, 1):
 			stft[:, :, :, ch_idx] = torch.stft(signal[:, :, ch_idx], n_fft=self.nfft, hop_length=win_shift, win_length=self.win_len,
-								   window=window, center=False, normalized=False, return_complex=True)
+								   window=window, center=True, normalized=False, return_complex=True)
 
 		return stft
 
@@ -583,8 +583,8 @@ class PredDOA(nn.Module):
 						pred_rebatch[:, t_idx*time_pool_size: (t_idx+1)*time_pool_size, :, :], dim=1)
 				pred_rebatch = pred_phases * 1
 				nt = nt_pool * 1
-			pred_spatial_spectrum = torch.bmm(pred_rebatch.contiguous().view(nb, nt, -1),
-											  dpipd_template.contiguous().view(nb, nele, nazi, -1).permute(0, 3, 1, 2).view(nb, nmic * nf, -1))/(nmic*nf/2)  # (nb, nt, nele*nazi)
+			pred_spatial_spectrum = torch.bmm(pred_rebatch.reshape(nb, nt, -1),
+											  dpipd_template.reshape(nb, nele, nazi, -1).permute(0, 3, 1, 2).view(nb, nmic * nf, -1))/(nmic*nf/2)  # (nb, nt, nele*nazi)
 			pred_spatial_spectrum = pred_spatial_spectrum.view(nb, nt, nele, nazi)
 
 			pred_DOAs = torch.zeros((nb, nt, 2, self.max_num_sources), dtype=torch.float32, requires_grad=False)
@@ -594,8 +594,8 @@ class PredDOA(nn.Module):
 			pred_VADs = pred_VADs.to(self.dev)
 			if self.method_mode == 'IDL': # iterative source detection and localization
 				for source_idx in range(self.max_num_sources):
-					map = torch.bmm(pred_rebatch.contiguous().view(nb, nt, -1),
-									dpipd_template.contiguous().view(nb, nele, nazi, -1).permute(0, 3, 1, 2).view(nb, nmic * nf, -1)) / (
+					map = torch.bmm(pred_rebatch.reshape(nb, nt, -1),
+									dpipd_template.reshape(nb, nele, nazi, -1).permute(0, 3, 1, 2).view(nb, nmic * nf, -1)) / (
 									  nmic * nf / 2)  # (nb, nt, nele*nazi)
 					map = map.view(nb, nt, nele, nazi)
 
@@ -657,7 +657,7 @@ class PredDOA(nn.Module):
 			doa_est = pred_batch[0] * 180 / np.pi
 			doa_est = doa_est.to(self.dev)
 			doa_gt = doa_gt[:,:,:,np.newaxis].to(self.dev)
-			vad_est = pred_batch[-2].to(self.dev)
+			vad_est = torch.ones(vad_gt.shape).to(vad_gt)
 			vad_gt = gt_batch[-1].to(self.dev)
 		metric_5 = {}
 		#metric_10 = {}
@@ -671,6 +671,6 @@ class PredDOA(nn.Module):
 		#metric_10['ACC'], metric_10['MAE'], = \
 		# 	self.getmetric(doa_gt, vad_gt, doa_est, vad_est, ae_mode = ae_mode, ae_TH=10, useVAD=False, vad_TH=vad_TH)
 		metric_5['ACC'], metric_5['MAE'], = \
-		  	self.getmetric(doa_gt, vad_gt, doa_est, vad_est, ae_mode = ae_mode, ae_TH=5, useVAD=False, vad_TH=vad_TH)
+		  	self.getmetric(doa_gt, vad_gt, doa_est, vad_est, ae_mode = ae_mode, ae_TH=5, useVAD=True, vad_TH=vad_TH)
 		return metric_5#, metric_10
 
