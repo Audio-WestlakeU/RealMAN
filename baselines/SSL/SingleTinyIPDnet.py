@@ -51,8 +51,7 @@ class CnnBlock(nn.Module):
 		self.conv1 = nn.Conv2d(138, 64, kernel_size=kernel, stride=stride, padding=padding, bias=False)
 		self.conv2 = nn.Conv2d(64, 32, kernel_size=kernel, stride=stride, padding=padding, bias=False)
 		self.conv3 = nn.Conv2d(32, 8, kernel_size=kernel, stride=stride, padding=padding, bias=False)
-		self.pooling1 = nn.AvgPool2d(kernel_size=(1, 3))
-		self.pooling2 = nn.AvgPool2d(kernel_size=(1, 2))                
+		self.pooling = nn.AvgPool2d(kernel_size=(1, 2))                
 		self.pad = padding
 		self.relu = nn.ReLU(inplace=True)
 		self.tanh = nn.Tanh()
@@ -60,10 +59,9 @@ class CnnBlock(nn.Module):
 	def forward(self, x):
 		out = self.conv1(x)
 		out = self.relu(out)
-		out = self.pooling1(out)
 		out = self.conv2(out)
 		out = self.relu(out)
-		out = self.pooling2(out)
+		out = self.pooling(out)
 		out = self.conv3(out)
 		out = self.tanh(out)
 		return out
@@ -92,13 +90,13 @@ class SingleTinyIPDnet(nn.Module):
         x = self.block_2(x,fb_skip=fb_skip, nb_skip=nb_skip)
         nb,nt,nf,nc = x.shape
         x = x.permute(0,3,2,1)
-        nt2 = nt//6
+        nt2 = nt//5
         x = self.conv(x).permute(0,3,2,1).reshape(nb,nt2,nf,1,-1).permute(0,1,3,2,4) 
         doa_final = x.reshape(nb,nt2,1,nf*2,-1).permute(0,1,3,4,2)
         return doa_final
 
 if __name__ == "__main__":
-    x = torch.randn((1,2,257,280))
+    x = torch.randn((1,10,256,200))
     model = SingleTinyIPDnet()
     import time
     ts = time.time()
