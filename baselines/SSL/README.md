@@ -1,6 +1,6 @@
 ### Introduction
 
-In the RealMAN paper, we use the CRNN and a tiny version of IPDnet [1] as our baseline models. The design of the CRNN structure is based on [2]. For the IPDnet, please visit the [FN-SSL](https://github.com/Audio-WestlakeU/FN-SSL) for more details.
+In the RealMAN paper, we use the CRNN and a tiny version of IPDnet [1] as our baseline models. The design of the [CRNN structure](https://github.com/BingYang-20/SRP-DNN) is based on [2]. For the IPDnet, please visit the [FN-SSL](https://github.com/Audio-WestlakeU/FN-SSL) for more details.
 
 | Code | Description |
 | --- | --- |
@@ -29,4 +29,4 @@ Meanwhile, we have provided code for training the variable-array version of IPDn
 
 [1] Yabo Wang, Bing Yang, Xiaofei Li. [IPDnet: A Universal Direct-Path IPD Estimation Network for Sound Source Localization](https://arxiv.org/abs/2405.07021).
 
-[2] Bing Yang, Hong Liu, Xiaofei Li. SRP-DNN: Learning direct-path phase difference for multiple moving sound source localization. ICASSP, 2022.
+[2] Bing Yang, Hong Liu, Xiaofei Li. [SRP-DNN: Learning direct-path phase difference for multiple moving sound source localization](https://ieeexplore.ieee.org/document/9746624). ICASSP, 2022.
