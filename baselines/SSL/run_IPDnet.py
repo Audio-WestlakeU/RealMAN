@@ -83,7 +83,7 @@ class MyModel(LightningModule):
             fs: int = 16000,
             win_len: int = 512,
             nfft: int = 512,
-            win_shift_ratio: float = 0.5,
+            win_shift_ratio: float = 0.625,
             method_mode: str = 'IDL',
             source_num_mode: str = 'KNum',
             cuda_activated: bool = True,
@@ -142,7 +142,6 @@ class MyModel(LightningModule):
         array_topo = batch[3]
         data_batch = self.data_preprocess(mic_sig_batch, targets_batch, array_topo, vad_batch)
         in_batch = data_batch[0]
-        in_batch = in_batch[:,:,:,:245]
         gt_batch = data_batch[1:]
         pred_batch = self(in_batch)
         loss = self.cal_loss(pred_batch=pred_batch, gt_batch=gt_batch)
