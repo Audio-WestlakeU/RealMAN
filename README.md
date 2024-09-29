@@ -12,10 +12,10 @@
 </div>
 
 ---
-<!-- ```
+
 ### Version update
 + 2024.09: [**Important update!**] Please download the latest version of dataset and baseline code.
-  - ☐ **Dataset will be updated soon**
+  - ☐ **Dataset will be updated soon (Expected on October 10th)**
     - save the wavform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
     - correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`
     - update `dataset_info.rar`
@@ -24,7 +24,7 @@
   - ☑ **[Paper updated](https://arxiv.org/abs/2406.19959v2)**
     - revise and improve the description of the RealMAN dataset, baseline experiments and other relevant sections
 + 2024.06: [Inital release](https://arxiv.org/abs/2406.19959v1)
-``` -->
+
 ---
 
 ### Introduction
