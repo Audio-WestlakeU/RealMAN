@@ -12,19 +12,19 @@
 </div>
 
 ---
-
+<!-- ```
 ### Version update
-+ 2024.09: [**important update!**] Please download the latest version of dataset and baseline code.
++ 2024.09: [**Important update!**] Please download the latest version of dataset and baseline code.
   - ☐ **Dataset will be updated soon**
-    - The wavform files in `dp_speech` in `train.rar`, `val.rar` and `test.rar` are saved in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version). 
-    - Correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`.
-    - Update `dataset_info.rar`.
+    - save the wavform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
+    - correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`
+    - update `dataset_info.rar`
   - ☑ **[Baseline code updated](https://github.com/Audio-WestlakeU/RealMAN/tree/main/baselines)**
-    - The speech-recording-to-noise-recording ratio (SNR) for baseline model training has been adjusted from [0, 15] dB to [-10, 15] dB.
+    - adjust the speech-recording-to-noise-recording ratio for baseline model training from [0, 15] dB to [-10, 15] dB
   - ☑ **[Paper updated](https://arxiv.org/abs/2406.19959v2)**
-    - The description of the RealMAN dataset, baseline experiments and other relevant sections has been revised and improved.
-+ 2024.06: [inital release](https://arxiv.org/abs/2406.19959v1)
-
+    - revise and improve the description of the RealMAN dataset, baseline experiments and other relevant sections
++ 2024.06: [Inital release](https://arxiv.org/abs/2406.19959v1)
+``` -->
 ---
 
 ### Introduction
@@ -35,7 +35,7 @@ The training of deep learning-based multichannel speech enhancement and source l
 The Audio Signal and Information Processing Lab at Westlake University, in collaboration with AISHELL, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
 - **Microphone array**: A 32-channel microphone array with high-fidelity microphones is used for recording
 - **Speech source**: A loudspeaker is used for playing source speech signals (about 35 hours of Mandarin speech)
-- **Recording duration and scenes**: A total of 83.7 hours of speech signals (about 48.3 hours for static speaker and 35.4 hours for moving speaker) are recorded in 32 different scenes, and 144.5 hours of background noise are recorded in 31 different scenes. Both speech and noise recording scenes cover various common indoor, outdoor, semi-outdoor and transportation environments, which enables the training of general-purpose speech enhancement and source localization networks.
+- **Recording duration and scene**: A total of 83.7 hours of speech signals (about 48.3 hours for static speaker and 35.4 hours for moving speaker) are recorded in 32 different scenes, and 144.5 hours of background noise are recorded in 31 different scenes. Both speech and noise recording scenes cover various common indoor, outdoor, semi-outdoor and transportation environments, which enables the training of general-purpose speech enhancement and source localization networks.
 - **Annotation**: To obtain the task-specific annotations, speaker location is annotated with an omni-directional fisheye camera by automatically detecting the loudspeaker. The direct-path signal is set as the target clean speech for speech enhancement, which is obtained by filtering the source speech signal with an estimated direct-path propagation filter.
 
 ***Baseline demonstration:***
