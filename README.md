@@ -4,26 +4,25 @@
 **A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
 
 <span style="font-size:10px;">
-<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv paper</a> by
+Paper [<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>] by
 <a href="https://audio.westlake.edu.cn/" target="_blank">AudioLab at Westlake University</a> &
 <a href="https://www.aishelltech.com/" target="_blank"> AIShell Technology Co. Ltd</a>
 </span>
-<!-- The details of the RealMAN dataset are described in the following paper: -->
 </div>
 
 ---
 
 ### Version update
 + 2024.09: [**Important update!**] Please download the latest version of dataset and baseline code.
-  - ☐ **Dataset will be updated soon (Expected on October 10th)**
+  - ☑ **[Dataset updated](https://mab.to/uFs0WNo0hgrV6/us3)** (October 12th)
     - save the wavform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
     - correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`
     - update `dataset_info.rar`
   - ☑ **[Baseline code updated](https://github.com/Audio-WestlakeU/RealMAN/tree/main/baselines)**
     - adjust the speech-recording-to-noise-recording ratio for baseline model training from [0, 15] dB to [-10, 15] dB
-  - ☑ **[Paper updated](https://arxiv.org/abs/2406.19959v2)**
+  - ☑ **[Paper updated](https://arxiv.org/pdf/2406.19959v2)**
     - revise and improve the description of the RealMAN dataset, baseline experiments and other relevant sections
-+ 2024.06: [Inital release](https://arxiv.org/abs/2406.19959v1)
++ 2024.06: [Inital release](https://arxiv.org/pdf/2406.19959v1)
 
 ---
 
@@ -51,7 +50,7 @@ The Audio Signal and Information Processing Lab at Westlake University, in colla
  - **Quantity and diversity**: We record both speech signals and noise signals across various scenes. Compared with existing datasets, our collection offers greater diversity in spatial acoustics (in terms of acoustic scenes, source positions and states, etc) and noise types. This enables effective training of speech enhancement and source localization networks.   
 - **Annotation**: We provide detailed annotations for direct-path speech, speech transcriptions and source location, which are essential for accurate training and evaluation. 
 - **Number of channels**: The number of microphone channels, i.e. 32, is higher than almost all existing datasets, which facilitates the training of variable-array networks.  
-- **Relatively low recording cost**：The recording, playback, and camera devices are portable and easily transportable to different scenes. 
+- **Relatively low recording cost**: The recording, playback, and camera devices are portable and easily transportable to different scenes. 
 
 <div align=center>
 <img src=images/devices.png width="700"/>
@@ -67,12 +66,12 @@ The dataset comprises the following components:
 
 | File | Size | Description |
 | -------- | -- | -- |
-| `train.rar` | 521.76 GB | The training set consisting of 36.9 hours of static speaker speech and 27.1 hours of moving speaker speech  (`ma_speech`), 106.3 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`train_*_source_location.csv`). |
-| `val.rar` | 25.57 GB | The validation set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`val_*_source_location.csv`). |
-| `test.rar` | 38.02 GB | The test set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`test_*_source_location.csv`). |
-| `val_raw.rar` | 65.57 GB | The raw validation set consisting of 4.6 hours of static speaker speech and 3.5 hours of moving speaker speech (`ma_speech`) and 16.0 hours of noise recordings (`ma_noise`). |
-| `test_raw.rar` | 91.75 GB | The raw test set consisting of 6.8 hours of static speaker speech and 4.8 hours of moving speaker speech (`ma_speech`) and 22.2 hours of noise recordings (`ma_noise`). |
-| `dataset_info.rar` | 127.9 MB | The dataset information file including scene photos, scene information (T60, recording duration, etc), and speaker information. |
+| `train.rar` | 531.4 GB | The training set consisting of 36.9 hours of static speaker speech and 27.1 hours of moving speaker speech  (`ma_speech`), 106.3 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`train_*_source_location.csv`). |
+| `val.rar` | 27.5 GB | The validation set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`val_*_source_location.csv`). |
+| `test.rar` | 39.3 GB | The test set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`test_*_source_location.csv`). |
+| `val_raw.rar` | 66.4 GB | The raw validation set consisting of 4.6 hours of static speaker speech and 3.5 hours of moving speaker speech (`ma_speech`) and 16.0 hours of noise recordings (`ma_noise`). |
+| `test_raw.rar` | 91.6 GB | The raw test set consisting of 6.8 hours of static speaker speech and 4.8 hours of moving speaker speech (`ma_speech`) and 22.2 hours of noise recordings (`ma_noise`). |
+| `dataset_info.rar` | 129 MB | The dataset information file including scene photos, scene information (T60, recording duration, etc), and speaker information. |
 | `transcriptions.trn` | 2.4 MB | The transcription file of speech for the dataset. |
 
 <!-- ```
