@@ -3,12 +3,12 @@
  
 **A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
 
-<span style="font-size:10px;">
+<span style="font-size:10px;"> 
+<a href="https://mab.to/uFs0WNo0hgrV6/us3" target="_blank">Dataset</a> | 
+<a href="https://arxiv.org/abs/2406.19959" target="_blank">Paper-arXiv</a>
 
-[Dataset](https://mab.to/uFs0WNo0hgrV6/us3) | [Paper-arXiv](https://arxiv.org/abs/2406.19959)
-
-[AudioLab at Westlake University](https://audio.westlake.edu.cn) &
-[AIShell Technology Co. Ltd](https://www.aishelltech.com)
+<a href="https://audio.westlake.edu.cn" target="_blank">AudioLab at Westlake University</a> | 
+<a href="https://www.aishelltech.com" target="_blank">AIShell Technology Co. Ltd</a>
 </span>
 </div>
 
