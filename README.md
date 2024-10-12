@@ -15,8 +15,8 @@
 ---
 
 ### Version update
-+ 2024.09: [**Important update!**] Please download the latest version of dataset and baseline code.
-  - ☑ **[Dataset updated](https://mab.to/uFs0WNo0hgrV6/us3)** (October 12th)
++ 2024.10.12: **Important update** (please download the latest version of dataset and baseline code)
+  - ☑ **[Dataset updated](https://mab.to/uFs0WNo0hgrV6/us3)** 
     - save the wavform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
     - correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`
     - update `dataset_info.rar`
