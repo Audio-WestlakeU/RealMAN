@@ -4,10 +4,10 @@
 **A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization** 
 
 <span style="font-size:10px;"> 
-<a href="https://mab.to/uFs0WNo0hgrV6/us3" target="_blank">Dataset</a> | 
-<a href="https://arxiv.org/abs/2406.19959" target="_blank">Paper-arXiv</a>
+Dataset-<a href="https://huggingface.co/datasets/AISHELL/RealMAN" target="_blank">URL1</a>,<a href="https://mab.to/uFs0WNo0hgrV6/us3" target="_blank">URL2</a> |  
+Paper-<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>
 
-<a href="https://audio.westlake.edu.cn" target="_blank">AudioLab at Westlake University</a> | 
+<a href="https://audio.westlake.edu.cn" target="_blank">AudioLab at Westlake University</a> & 
 <a href="https://www.aishelltech.com" target="_blank">AIShell Technology Co. Ltd</a>
 </span>
 </div>
@@ -62,19 +62,19 @@ The Audio Signal and Information Processing Lab at Westlake University, in colla
 ### Download
 
 To download the entire dataset, you can access: 
-<a href="https://mab.to/uFs0WNo0hgrV6/us3" target="_blank">Origninal data page</a> or 
+<a href="https://huggingface.co/datasets/AISHELL/RealMAN" target="_blank">Hugging Face page</a> or 
 <a href="https://www.aishelltech.com/RealMAN" target="_blank">AISHELL page</a>. 
 The dataset comprises the following components:
 
 | File | Size | Description |
 | -------- | -- | -- |
-| `train.rar` | 531.4 GB | The training set consisting of 36.9 hours of static speaker speech and 27.1 hours of moving speaker speech  (`ma_speech`), 106.3 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`train_*_source_location.csv`). |
-| `val.rar` | 27.5 GB | The validation set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`val_*_source_location.csv`). |
-| `test.rar` | 39.3 GB | The test set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`test_*_source_location.csv`). |
-| `val_raw.rar` | 66.4 GB | The raw validation set consisting of 4.6 hours of static speaker speech and 3.5 hours of moving speaker speech (`ma_speech`) and 16.0 hours of noise recordings (`ma_noise`). |
-| `test_raw.rar` | 91.6 GB | The raw test set consisting of 6.8 hours of static speaker speech and 4.8 hours of moving speaker speech (`ma_speech`) and 22.2 hours of noise recordings (`ma_noise`). |
-| `dataset_info.rar` | 129 MB | The dataset information file including scene photos, scene information (T60, recording duration, etc), and speaker information. |
-| `transcriptions.trn` | 2.4 MB | The transcription file of speech for the dataset. |
+| [`train.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/train) | 531.4 GB | The training set consisting of 36.9 hours of static speaker speech and 27.1 hours of moving speaker speech  (`ma_speech`), 106.3 hours of noise recordings (`ma_noise`), 0-channel direct path speech (`dp_speech`) and sound source location (`train_*_source_location.csv`). |
+| [`val.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/val) | 27.5 GB | The validation set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`val_*_source_location.csv`). |
+| [`test.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/test) | 39.3 GB | The test set consisting of mixed noisy speech recordings (`ma_noisy_speech`), 0-channel direct path speech (`dp_speech`) and sound source location (`test_*_source_location.csv`). |
+| [`val_raw.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/val_raw) | 66.4 GB | The raw validation set consisting of 4.6 hours of static speaker speech and 3.5 hours of moving speaker speech (`ma_speech`) and 16.0 hours of noise recordings (`ma_noise`). |
+| [`test_raw.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/test_raw) | 91.6 GB | The raw test set consisting of 6.8 hours of static speaker speech and 4.8 hours of moving speaker speech (`ma_speech`) and 22.2 hours of noise recordings (`ma_noise`). |
+| [`dataset_info.rar`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main/dataset_info) | 129 MB | The dataset information file including scene photos, scene information (T60, recording duration, etc), and speaker information. |
+| [`transcriptions.trn`](https://huggingface.co/datasets/AISHELL/RealMAN/tree/main) | 2.4 MB | The transcription file of speech for the dataset. |
 
 <!-- ```
 ### Download Scripts
