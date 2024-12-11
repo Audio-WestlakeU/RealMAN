@@ -61,9 +61,15 @@ The Audio Signal and Information Processing Lab at Westlake University, in colla
 
 ### Download
 
-To download the entire dataset, you can access: 
-<a href="https://huggingface.co/datasets/AISHELL/RealMAN" target="_blank">Hugging Face page</a> or 
-<a href="https://www.aishelltech.com/RealMAN" target="_blank">AISHELL page</a>. 
+To download the entire dataset, you can choose one of the following ways
+- directly access the page and download via the download button
+  - <a href="https://huggingface.co/datasets/AISHELL/RealMAN" target="_blank">Hugging Face page</a>
+  - <a href="https://www.aishelltech.com/RealMAN" target="_blank">AISHELL page</a>
+- use the download command:
+  ```
+  huggingface-cli download AISHELL/RealMAN --repo-type dataset --local-dir RealMAN
+  ```
+
 The dataset comprises the following components:
 
 | File | Size | Description |
@@ -166,3 +172,4 @@ To attribute this work, please use the following citation format:
   booktitle="International Conference on Neural Information Processing Systems (NIPS)", 
   year="2024",
   pages=""}
+```
