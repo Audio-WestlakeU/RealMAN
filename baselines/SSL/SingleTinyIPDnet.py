@@ -51,7 +51,7 @@ class CnnBlock(nn.Module):
 		self.conv1 = nn.Conv2d(138, 64, kernel_size=kernel, stride=stride, padding=padding, bias=False)
 		self.conv2 = nn.Conv2d(64, 32, kernel_size=kernel, stride=stride, padding=padding, bias=False)
 		self.conv3 = nn.Conv2d(32, 8, kernel_size=kernel, stride=stride, padding=padding, bias=False)
-		self.pooling = nn.AvgPool2d(kernel_size=(1, 2))                
+		self.pooling = nn.AvgPool2d(kernel_size=(1, 5))                
 		self.pad = padding
 		self.relu = nn.ReLU(inplace=True)
 		self.tanh = nn.Tanh()
