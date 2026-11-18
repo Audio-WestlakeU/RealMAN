@@ -15,9 +15,9 @@ Paper-<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>
 ---
 
 ### Version update
-+ 2024.10.12: **Important update** (please download the latest version of dataset and baseline code)
++ 2024.10.12: **Important update** (please download the latest version of the dataset and baseline code)
   - ☑ **[Dataset updated](https://mab.to/uFs0WNo0hgrV6/us3)** 
-    - save the wavform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
+    - save the waveform files in `dp_speech` of `train.rar`, `val.rar` and `test.rar` in 24-bit format to minimize weak background noise (replacing the 16-bit format used in the previous version)
     - correct several inaccurate speaker azimuth annotations, and add annotations for speaker elevation and distance in `*_*_source_location.csv`
     - update `dataset_info.rar`
   - ☑ **[Baseline code updated](https://github.com/Audio-WestlakeU/RealMAN/tree/main/baselines)**
@@ -30,7 +30,7 @@ Paper-<a href="https://arxiv.org/abs/2406.19959" target="_blank">arXiv</a>
 
 ### Introduction
 ***Motivation:***
-The training of deep learning-based multichannel speech enhancement and source localization systems relies heavily on the simulation of room impulse response and multichannel diffuse noise, due to the lack of large-scale real-recorded datasets. However, the acoustic mismatch between simulated and real-world data could degrade the model performance when applying in real-world scenarios. To bridge this simulation-to-real gap, we presents a new relatively large-scale real-recorded and annotated dataset. 
+The training of deep learning-based multichannel speech enhancement and source localization systems relies heavily on the simulation of room impulse response and multichannel diffuse noise, due to the lack of large-scale real-recorded datasets. However, the acoustic mismatch between simulated and real-world data could degrade the model performance when applied in real-world scenarios. To bridge this simulation-to-real gap, we present a new relatively large-scale real-recorded and annotated dataset. 
 
 ***Description:*** 
 The Audio Signal and Information Processing Lab at Westlake University, in collaboration with AISHELL, has released the **Real**-recorded and annotated **M**icrophone **A**rray speech&**N**oise (**RealMAN**) dataset, which provides annotated multi-channel speech and noise recordings for dynamic speech enhancement and localization:
@@ -51,7 +51,7 @@ The Audio Signal and Information Processing Lab at Westlake University, in colla
 - **Realness**: Speech and noise are recorded in real environments. Direct recording for moving sources avoids issues associated with the piece-wise generation method. Different individuals move the loudspeaker freely to closely mimic human movements in real applications.
  - **Quantity and diversity**: We record both speech signals and noise signals across various scenes. Compared with existing datasets, our collection offers greater diversity in spatial acoustics (in terms of acoustic scenes, source positions and states, etc) and noise types. This enables effective training of speech enhancement and source localization networks.   
 - **Annotation**: We provide detailed annotations for direct-path speech, speech transcriptions and source location, which are essential for accurate training and evaluation. 
-- **Number of channels**: The number of microphone channels, i.e. 32, is higher than almost all existing datasets, which facilitates the training of variable-array networks.  
+- **Number of channels**: The number of microphone channels, i.e., 32, is higher than almost all existing datasets, which facilitates the training of variable-array networks.  
 - **Relatively low recording cost**: The recording, playback, and camera devices are portable and easily transportable to different scenes. 
 
 <div align=center>
@@ -169,7 +169,7 @@ To attribute this work, please use the following citation format:
 @InProceedings{RealMAN2024,
   author="Bing Yang and Changsheng Quan and Yabo Wang and Pengyu Wang and Yujie Yang and Ying Fang and Nian Shao and Hui Bu and Xin Xu and Xiaofei Li",
   title="RealMAN: A Real-Recorded and Annotated Microphone Array Dataset for Dynamic Speech Enhancement and Localization",
-  booktitle="International Conference on Neural Information Processing Systems (NIPS)", 
+  booktitle="International Conference on Neural Information Processing Systems (NeurIPS)", 
   year="2024",
   pages=""}
 ```
